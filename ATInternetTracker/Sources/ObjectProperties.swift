@@ -26,8 +26,12 @@
 import Foundation
 
 public class ECommerceCart: RequiredPropertiesDataObject {
+    
+   @objc let version : String = String(describing: Int.random(in: 10000000 ..< 100000000))
+    
     override init() {
         super.init()
+        propertiesPrefixMap["version"] = "s"
         propertiesPrefixMap["id"] = "s"
         propertiesPrefixMap["currency"] = "s"
         
